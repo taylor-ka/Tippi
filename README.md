@@ -35,6 +35,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+* I accidentally discarded part of my app because my source code wasn't synced with GitHub, so I had to rewrite it.
 
 ## Credits
 
