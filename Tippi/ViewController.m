@@ -40,6 +40,28 @@
     self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
     self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];
 }
+- (IBAction)onEditingBegin:(id)sender {
+    [UIView animateWithDuration:0.2 animations:^{
+        self.billField.frame = CGRectMake(self.billField.frame.origin.x, self.billField.frame.origin.y +30 ,self.billField.frame.size.width, self.billField.frame.size.height);
+    }];
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.tipLabel.alpha = 0;
+    }];
+}
+
+- (IBAction)onEditingEnd:(id)sender {
+    [UIView animateWithDuration:0.2 animations:^{
+        CGRect newFrame = self.billField.frame;
+        newFrame.origin.y -= 30;
+        
+        self.billField.frame = newFrame;
+    }];
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.tipLabel.alpha = 1;
+    }];
+}
 
 
 @end
