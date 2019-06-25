@@ -1,10 +1,10 @@
-# Project 1 - *Name of App Here*
+# Project 1 - Tippi
 
-**Name of your app** is a tip calculator application for iOS.
+**Tippi** is a tip calculator application for iOS.
 
-Submitted by: **Your Name Here**
+Submitted by: **Taylor Ka**
 
-Time spent: **X** hours spent in total
+Time spent: **3 hours** hours spent in total
 
 ## User Stories
 
