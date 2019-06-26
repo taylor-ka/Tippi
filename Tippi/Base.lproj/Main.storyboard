@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tips-->
+        <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -90,7 +90,18 @@
                             <outletCollection property="gestureRecognizers" destination="DLj-sy-pJx" appends="YES" id="Xyj-8Z-gTr"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tips" id="amU-T0-LVO"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="amU-T0-LVO">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="lNq-pR-SeE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qu2-cd-lIg">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="bXU-M6-h9t" kind="push" id="cdQ-wG-Qu5"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="Zoh-06-6OS" id="MQs-JY-rQU"/>
                         <outlet property="tipControl" destination="ej9-cZ-Md6" id="MM9-IA-NyJ"/>
@@ -106,6 +117,41 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="916" y="34.632683658170919"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="VTS-7B-N8s">
+            <objects>
+                <viewController id="bXU-M6-h9t" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ieS-D5-HMa" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X1T-Z7-SVZ">
+                                <rect key="frame" x="139" y="142" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom Tip Percentage (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsD-Ko-3NR">
+                                <rect key="frame" x="82" y="94" width="211" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fNN-Ti-4OJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BFx-aN-AXw"/>
+                    <connections>
+                        <outlet property="percentField" destination="X1T-Z7-SVZ" id="ENW-8y-39r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8I9-ny-Bg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.8" y="34.632683658170919"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RMy-6i-Whj">

@@ -15,6 +15,7 @@
 		B6AE83C422C2C14600ECCABD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AE83C322C2C14600ECCABD /* main.m */; };
 		B6AE83CE22C2C14600ECCABD /* TippiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AE83CD22C2C14600ECCABD /* TippiTests.m */; };
 		B6AE83D922C2C14600ECCABD /* TippiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AE83D822C2C14600ECCABD /* TippiUITests.m */; };
+		B6AE83E822C2F13200ECCABD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AE83E722C2F13200ECCABD /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		B6AE83D422C2C14600ECCABD /* TippiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TippiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6AE83D822C2C14600ECCABD /* TippiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TippiUITests.m; sourceTree = "<group>"; };
 		B6AE83DA22C2C14600ECCABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6AE83E622C2F13200ECCABD /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B6AE83E722C2F13200ECCABD /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				B6AE83BF22C2C14600ECCABD /* LaunchScreen.storyboard */,
 				B6AE83C222C2C14600ECCABD /* Info.plist */,
 				B6AE83C322C2C14600ECCABD /* main.m */,
+				B6AE83E622C2F13200ECCABD /* SettingsViewController.h */,
+				B6AE83E722C2F13200ECCABD /* SettingsViewController.m */,
 			);
 			path = Tippi;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				B6AE83B922C2C14500ECCABD /* ViewController.m in Sources */,
 				B6AE83C422C2C14600ECCABD /* main.m in Sources */,
 				B6AE83B622C2C14400ECCABD /* AppDelegate.m in Sources */,
+				B6AE83E822C2F13200ECCABD /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

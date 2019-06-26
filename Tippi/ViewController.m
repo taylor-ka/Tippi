@@ -21,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setDouble:0.22 forKey:@"custom_tip"];
+    [defaults synchronize];
 }
 - (IBAction)onTap:(id)sender {
     NSLog(@"Hello");
@@ -28,9 +32,16 @@
 }
 
 - (IBAction)onEdit:(id)sender {
+    [self updateCalculation];
+}
+
+- (void)updateCalculation {
     double bill = [self.billField.text doubleValue];
     
-    NSArray *percentages = @[@(0.15), @(0.2), @(0.22)];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    double custom = [defaults doubleForKey:@"custom_tip"];
+    
+    NSArray *percentages = @[@(0.15), @(0.2), @(custom)];
     
     double tipPercentage = [percentages[self.tipControl.selectedSegmentIndex] doubleValue];
     
@@ -40,6 +51,7 @@
     self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
     self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];
 }
+
 - (IBAction)onEditingBegin:(id)sender {
     [UIView animateWithDuration:0.2 animations:^{
         self.billField.frame = CGRectMake(self.billField.frame.origin.x, self.billField.frame.origin.y +30 ,self.billField.frame.size.width, self.billField.frame.size.height);
@@ -61,6 +73,19 @@
     [UIView animateWithDuration:1 animations:^{
         self.tipLabel.alpha = 1;
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    double custom = [defaults doubleForKey:@"custom_tip"] * 100;
+    int rounded = custom;
+    
+    [self.tipControl setTitle: [NSString stringWithFormat:@"%i%%", rounded] forSegmentAtIndex:2];
+    
+    [self updateCalculation];
+    
+    NSLog(@"View will appear");
 }
 
 
